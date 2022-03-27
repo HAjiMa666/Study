@@ -1,0 +1,50 @@
+<!--
+ * @Author: czx
+ * @Date: 2022-03-22 07:55:40
+ * @LastEditors: czx
+ * @LastEditTime: 2022-03-22 08:12:21
+ * @description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+
+  </div>
+  <template id="myapp">
+    <template v-if="isShow===true">
+      <h1>1</h1>
+      <h1>2</h1>
+      <h1>3</h1>
+    </template>
+    <template v-if="isfalse===true">
+      <h1>1</h1>
+      <h1>2</h1>
+      <h1>3</h1>
+    </template>
+  </template>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    Vue.createApp({
+      template: "#myapp",
+      data: function () {
+        return {
+          message: "Hello World",
+          score: 60,
+          isShow: true,
+          isfalse: false,
+        }
+      }
+    }).mount("#app");
+  </script>
+
+</body>
