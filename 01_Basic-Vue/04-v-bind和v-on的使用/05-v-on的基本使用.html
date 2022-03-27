@@ -1,0 +1,61 @@
+<!--
+ * @Author: czx
+ * @Date: 2022-03-21 23:40:23
+ * @LastEditors: czx
+ * @LastEditTime: 2022-03-21 23:52:38
+ * @description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .test {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    margin: 10px 0px;
+  }
+</style>
+
+<body>
+
+  <div id="app">
+
+  </div>
+  <template id="myapp">
+    <h1>{{message}}</h1>
+    <!-- 完整写法 -->
+    <div v-on:click="handleClick" class="test">1</div>
+    <!-- 语法糖写法 -->
+    <div @click="handleClick" class="test">2</div>
+    <div v-on:mousedown="handleHover" class="test">3</div>
+    <!-- 对象写法 -->
+    <div v-on="{click:handleClick,mousedown:handleHover}" class="test">4</div>
+  </template>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    Vue.createApp({
+      template: "#myapp",
+      data: function () {
+        return {
+          message: "Hello World",
+        }
+      },
+      methods: {
+        handleClick() {
+          console.log("我被点击了");
+        },
+        handleHover() {
+          console.log("我被摸了");
+        }
+      }
+    }).mount("#app");
+  </script>
+
+</body>
