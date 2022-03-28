@@ -2,7 +2,7 @@
  * @Author: czx
  * @Date: 2022-03-26 15:59:48
  * @LastEditors: czx
- * @LastEditTime: 2022-03-27 11:03:18
+ * @LastEditTime: 2022-03-28 08:35:44
  * @description: 
  */
 const path = require("path");
@@ -46,6 +46,13 @@ module.exports = {
           },
           "less-loader",
         ]
+      },
+      {
+        test: /\.(png|jpe?g|svg|gif)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "static/[name]-[hash:6][ext][query]"
+        }
       }
     ]
   }
