@@ -2,12 +2,17 @@
  * @Author: czx
  * @Date: 2022-03-26 15:59:48
  * @LastEditors: czx
- * @LastEditTime: 2022-03-28 10:26:00
+ * @LastEditTime: 2022-03-28 12:32:03
  * @description: 
  */
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 // console.log(path.resolve(__dirname));
 module.exports = {
+  mode: "development",
+  devtool: "source-map",
   // 更改打包入口
   entry: "./src/main.js",
   //更改打包出口
@@ -15,7 +20,7 @@ module.exports = {
     //更改打包结束之后的路径
     path: path.resolve(__dirname, "./build"),
     //更改结束打包之后的名字
-    filename: "bundle.js"
+    filename: "js/bundle.js"
   },
   module: {
     rules: [
@@ -67,5 +72,23 @@ module.exports = {
         },
       }
     ]
-  }
+  },
+  plugins: [
+    //一个个的插件对象
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "public",
+          to: ".",
+          globOptions: {
+            ignore: [
+              "**/index.html"
+            ]
+          }
+        }
+      ]
+    }),
+  ]
 }
