@@ -2,19 +2,20 @@
  * @Author: czx
  * @Date: 2022-03-26 15:59:48
  * @LastEditors: czx
- * @LastEditTime: 2022-03-28 22:25:43
+ * @LastEditTime: 2022-03-29 07:32:20
  * @description: 
  */
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-// console.log(path.resolve(__dirname));
+const { VueLoaderPlugin } = require("vue-loader/dist/index")
+const { DefinePlugin } = require("webpack")
 module.exports = {
   mode: "development",
   devtool: "source-map",
   // 更改打包入口
-  entry: "./src/main.js",
+  entry: "./src/index.js",
   //更改打包出口
   output: {
     //更改打包结束之后的路径
@@ -24,6 +25,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.vue$/,
+        loader: "vue-loader"
+      }
+      ,
       {
         test: /\.js/,
         loader: "babel-loader"
@@ -81,19 +87,15 @@ module.exports = {
   plugins: [
     //一个个的插件对象
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(),
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //       from: "public",
-    //       to: ".",
-    //       globOptions: {
-    //         ignore: [
-    //           "**/index.html"
-    //         ]
-    //       }
-    //     }
-    //   ]
-    // }),
+    new HtmlWebpackPlugin({
+      template: "public/index.html",
+    }),
+    new VueLoaderPlugin(),
+    new DefinePlugin({
+      //是否还适配vue2代码,false的话 那么会将适配代码删除掉 有一定的优化
+      __VUE_OPTIONS_API__: false,
+      //是否在生产环境下使用开发工具
+      __VUE_PROD_DEVTOOLS__: true,
+    })
   ]
 }
