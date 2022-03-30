@@ -2,8 +2,8 @@
  * @Author: czx
  * @Date: 2021-11-11 14:37:41
  * @LastEditors: czx
- * @LastEditTime: 2022-03-29 20:44:54
- * @description: 
+ * @LastEditTime: 2022-03-30 20:06:15
+ * @description: entries
  */
 // entries返回一个数组 数组元素以 [key,value]组成
 // 如果要想判断 一个对象是否为空
