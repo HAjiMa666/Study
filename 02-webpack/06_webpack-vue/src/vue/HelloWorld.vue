@@ -2,7 +2,7 @@
  * @Author: czx
  * @Date: 2022-03-29 07:17:45
  * @LastEditors: czx
- * @LastEditTime: 2022-03-29 07:24:42
+ * @LastEditTime: 2022-03-31 19:20:45
  * @description: 
 -->
 <template>
@@ -15,7 +15,7 @@ export default {
     return {
       message: "Hello World组件"
     }
-  }
+  },
 }
 </script>
 
