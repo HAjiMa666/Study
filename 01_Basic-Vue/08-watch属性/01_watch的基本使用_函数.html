@@ -1,0 +1,52 @@
+<!--
+ * @Author: czx
+ * @Date: 2022-03-25 08:06:23
+ * @LastEditors: czx
+ * @LastEditTime: 2022-03-25 08:13:50
+ * @description: 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+
+  </div>
+  <template id="myapp">
+    <h1 watch=>{{name}}</h1>
+    <input type="text" v-model="name">
+    <button @click="changeName">名字变化</button>
+  </template>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    Vue.createApp({
+      template: "#myapp",
+      data: function () {
+        return {
+          name: "Spirit",
+        }
+      },
+      methods: {
+        changeName() {
+          this.name = "czx"
+        }
+      },
+      watch: {
+        // 注意监听的属性是和data中的属性是一样的
+        name(newValue, oldValue) {
+          console.log("newValue", newValue, oldValue)
+        }
+      }
+    }).mount("#app");
+  </script>
+
+</body>
