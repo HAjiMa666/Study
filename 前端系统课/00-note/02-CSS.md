@@ -211,3 +211,12 @@ margin
 ## 行内非替换元素的注意事项
 1. 对于像`span`这种元素来讲,设置padding,border,虽然看起来盒子内容撑大了,但是实际上并不占据位置
 2. margin只能设置左右,上下不会设置
+
+## CSS多行省略
+```CSS
+overflow:hidden;
+text-overflow:ellipsis;
+display:-webkit-box;
+-webkit-line-clamp:3;
+-webkit-box-orient:vertical;
+```
