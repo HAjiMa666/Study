@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  /* 代码抽取部分 */
+  .sprite_01{
+    background-image: url(./images/coverall.png);
+    background-repeat: no-repeat;
+  }
+
+  .sprite_02{
+    background-image: url(./images/iconall.png);
+    background-repeat: no-repeat;
+  }
+
+  .absolute_center{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    margin: auto;
+  }
+
+  /* 局部样式代码 */
+  
+  .container{
+    width: 140px;
+  }
+
+  .container .top{
+    position: relative;
+    height: 140px;
+  }
+
+  .container .bottom{
+    height: 40px;
+    margin-top: 4px;
+    font-size: 14px;
+    background-color: #fff;
+  }
+
+  .container .top img{
+    display: block;
+  }
+  
+  .container .top .cover{
+    width: 140px;
+    height: 141px;
+    background-position: 0 0;
+
+    position: absolute;
+    top: 0;
+  }
+
+  .container .top .infoBar{
+    width: 100%;
+    height: 27px;
+    color: #fff;
+    font-size: 12px;
+    background-position:0 -537px;
+
+    position: absolute;
+    bottom: 0;
+  }
+
+  .container .top .infoBar .icon-music{
+    display: inline-block;
+    width: 14px;
+    height: 11px;
+    
+    background-position: 0 -24px;
+  
+    margin-left: 10px;
+  }
+
+  .container .top .infoBar span:nth-child(2){
+    width: 32px;
+    height: 16px;
+
+    margin-left: 32px; 
+  }
+
+  .container .top .infoBar .icon-play{
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    
+    background-position:  0 0;
+  
+    margin-right: 10px;
+  }
+
+</style>
+<body>
+  <div class="container">
+    <div class="top">
+      <img src="./images/109951164944280074.jpg" alt="">
+      <div class="sprite_01 cover"></div>
+      <div class="sprite_01 infoBar">
+        <span class="absolute_center sprite_02 icon-music"></span>
+        <span class="absolute_center">89万</span>
+        <span class="absolute_center sprite_02 icon-play"></span>
+      </div>
+    </div>
+    <div class="bottom">
+      [夜晚+学习] 代码/刷题时听的歌
+    </div>
+  </div>
+</body>
+</html>
