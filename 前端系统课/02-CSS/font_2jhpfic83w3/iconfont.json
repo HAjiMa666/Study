@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "29916451",
+      "name": "订单2",
+      "font_class": "a-15dingdan2",
+      "unicode": "edbb",
+      "unicode_decimal": 60859
+    },
+    {
+      "icon_id": "29916461",
+      "name": "订单1",
+      "font_class": "a-16dingdan1",
+      "unicode": "edbc",
+      "unicode_decimal": 60860
+    },
+    {
+      "icon_id": "29916462",
+      "name": "拍照",
+      "font_class": "a-17paizhao",
+      "unicode": "edbd",
+      "unicode_decimal": 60861
+    }
+  ]
+}

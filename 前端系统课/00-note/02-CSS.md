@@ -72,7 +72,7 @@
    4. id选择器
    5. 属性选择器
    6. 后代选择器
-   7. 直接子代选择器:`>`只靠近自己的第一个子代
+   7. 直接子代选择器:`>`自己的第一层子代
    8. 相邻兄弟选择器:`+`只选出靠近自己的第一个兄弟
    9. 普遍兄弟选择器:`~`选出所有相邻的兄弟
    10. 交集选择器:`div.box`用于精准选中某一个元素
@@ -89,6 +89,37 @@
    13. 伪元素:推荐使用两个冒号,伪类使用一个冒号
        1.  `::first-line/::first-letter`
        2.  `::before/::after`:注意其中的content不能被省略,即使是不想要内容,也需要保留.如果想要引入资源的时候,使用`url()`,动态的引入资源
+
+## CSS选择器-结构伪类
+:nth-child
+1. 用于选中当前元素的第几个,但是会受其他元素干扰,如果选中的元素的哪一个层级中有其他元素,也会计算进去
+2. 2n: 选偶数 2n+1选奇数
+
+:nth-last-child
+1. 用法和nth:child一样,这个是从后往前选
+
+:nth-of-type
+1. 这个是选中所属元素的第几个,不受其他元素的影响
+
+:root: 修改html元素
+:empty: 修改内容为空的元素
+
+```CSS
+/* 直接就会选中第三个div 这是与nth-child的区别 */
+div:nth-child(3){
+   /* 选中的是p */
+}
+div:nth-of-type(3){
+   /*选中的是 div*/
+}
+```
+```HTML
+ <div></div>
+ <div></div>
+ <p></p>
+ <div></div>
+ <div></div>
+```
 
 ## CSS的继承
 ### CSS的属性继承
@@ -220,3 +251,25 @@ display:-webkit-box;
 -webkit-line-clamp:3;
 -webkit-box-orient:vertical;
 ```
+
+## CSS属性: 设置背景
+1. background-image
+2. background-repeat
+3. background-size
+4. background-position
+5. background-attachment
+
+## web字体
+使用流程
+1. 需要有对应的font字体，放到对应的目录下
+2. 使用@font-face,设置具体的字体
+```CSS
+   @font-face{
+      font-family:"你自己随便起个名字";
+      src:url("字体存放的位置")
+   }
+```
+3. 使用的时候,font-family使用我们自己定义的字体即可
+
+web字体的兼容性
+![web字体的兼容性](2022-05-24-15-57-24.png)
