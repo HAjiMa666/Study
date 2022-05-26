@@ -347,3 +347,28 @@ web字体的兼容性
       2. 其次,我们使用伪元素在浮动元素的包裹盒子的后面加上,这样子一个块级元素直接被加在了浮动元素的后面,这样子继续保持了文档的标准,后面的内容就会挤着那个伪元素往下走.
 
 ## CSS-flex布局
+### flex布局的重要概念
+1. 开启了flex布局的元素叫 **flex container**
+2. flex container 里面的**直接子元素**叫做 **flex item**
+3. flex item的布局将受flex container属性的设置来进行控制和布局
+4. flex item不再严格区分块级元素和行内级元素
+5. flex item默认情况下是包裹内容的,但是可以设置宽度和高度
+6. 当设置display属性为flex时或者inline-flex可以成为flex container
+   1. flex: flex container 以block-level形式存在
+   2. inline-flex: flex container 以inline-level形式存在
+7. flex container中是按照主轴来进行排列的,同时有主轴的同时,有一个交叉轴
+8. 可以用在flex container和flex item上的属性
+   1. flex container
+      1. flex-flow
+      2. flex-direction
+      3. flex-wrap
+      4. justify-content
+      5. align-items
+      6. align-content
+   2. flex items
+      1. flex-grow
+      2. flex-basis
+      3. flex-shrink
+      4. order
+      5. align-self
+      6. flex
