@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container{
+    width: 1190px;
+    height: 600px;
+    background-color: #ccc;
+  }
+
+  .container .box{
+    /* 注意这个margin-right的负值 */
+    /* 因为 container的宽度=子元素的宽度+ml+mr的 */
+    /* 所以只有container为1200px的时候 才能够相等 */
+    /* 这也很好的解决了每个float元素向右都margin-right导致多了一个,浮动元素被挤下去的情况 */
+    margin-right: -10px;
+  }
+
+  .container .box span{
+    display: inline-block;
+    width: 230px;
+    height: 200px; 
+
+    background-color: red;
+
+    float: left;
+    margin-right: 10px; 
+  }
+
+  .container .box div{
+    clear: both;
+    background-color: green;
+  }
+
+</style>
+<body>
+  <div class="container">
+    <div class="box">
+      <span>span1</span>
+      <span>span2</span>
+      <span>span3</span>
+      <span>span4</span>
+      <span>span5</span>
+      <div>123</div>
+    </div>
+  </div>
+</body>
+</html>
