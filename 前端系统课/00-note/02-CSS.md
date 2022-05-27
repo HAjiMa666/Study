@@ -369,6 +369,8 @@ web字体的兼容性
       1. flex-grow
       2. flex-basis
       3. flex-shrink
-      4. order
+      4. order: 用于item排序的
       5. align-self
-      6. flex
+      6. flex:简写属性
+         1. `none | [<"flex-grow"> <"flex-shrink">? || <"flex-basis">]`
+         2. flex属性可以指定一个,两个或三个值
