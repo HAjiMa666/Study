@@ -392,3 +392,10 @@ web字体的兼容性
    1. 正的是顺时针,负的是逆时针
 
 4. transform-origin: 默认值是center center
+
+## CSS transition
+1. 它可以决定
+   1. 哪些属性可以发生动画效果(明确列出这些属性)
+   2. 何时开始(delay)
+   3. 持续开始(duration)
+   4. 如何动画(timing function)
