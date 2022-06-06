@@ -1,0 +1,189 @@
+.top{
+  display: flex;
+  height: 70px;
+  line-height: 70px;
+  background-color: #242424;
+}
+
+.top .topBar{
+  display: flex;
+}
+
+.top .topBar .logo{
+  width: 177px;
+  height: 69px;
+  padding-right: 20px;
+  background: url(../../images/topbar.png) no-repeat 0 0;
+}
+
+.top .topBar .logo a{
+  width: 157px;
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.bar{
+  display: flex;
+  height: 70px;
+}
+
+.item{
+  height: 69px;
+  font-size: 14px;
+  color: #ccc;
+
+  display: inline-block;
+  padding: 0 19px;
+
+  position: relative;
+}
+
+.bar li:hover .item{
+  background-color: #000;
+  color: #fff;
+}
+
+.action{
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  margin-left: 64px;
+}
+
+.action .search{
+  width: 158px;
+  height: 32px;
+  background-color: #fff;
+
+  display: flex;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.action .search input{
+  width: 120px;
+  height: 24px;
+
+  margin: auto;
+  margin-right: 12px;
+}
+
+.action .center{
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  text-align: center;
+
+  border: 1px solid #464646;
+  border-radius: 32px;
+
+  margin-left: 12px;
+}
+
+.action .center:hover{
+  border: 1px solid #fff;
+}
+.action .center:hover a{
+  color: #fff;
+}
+
+.action .center a{
+  display: inline-block;
+  height: 100%;
+  color: #ccc;
+}
+
+.login a{
+  font-size: 14px;
+  color: #787878;
+
+  margin-left: 16px;
+}
+
+.login:hover a{
+  color: #ccc;
+}
+
+.login a:hover{
+  text-decoration: underline;
+}
+
+.navBar{
+  height: 35px;
+  line-height: 35px;
+  background-color: #c20c0c;
+}
+
+.navBar .childBar{
+  height: 100%;
+  font-size: 12px;
+  padding-left: 180px;
+}
+
+.navBar .childBar .nav{
+  height: 100%;
+  display: flex;
+}
+
+.navBar .nav li a{
+  height: 100%;
+  display: inline-block
+}
+
+.navBarActive,
+.navBar .nav li a:hover span{
+  background-color: #9b0909;
+  border-radius: 16px;
+}
+
+.navBar .nav li span{
+  height: 20px;
+  color: #fff;
+  line-height: 19px;
+  
+  display: inline-block;
+  box-sizing: content-box;
+  margin: 7px 13px 0px 20px;
+  padding: 2px 13px;
+}
+
+.active{
+  color: #fff;
+  background-color: #000;
+  position: relative;
+}
+
+.active::after{
+  content: "";
+  width: 12px;
+  height: 7px;
+
+  background: url(../../images/topbar.png) -226px 0px;
+
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.hot-icon{
+  width: 28px;
+  height: 19px;
+  display: inline-block;
+
+  background: url(../../images/topbar.png) no-repeat -190px 0px;
+
+  position: absolute;
+  top: 14px;
+  right: -18px;
+}
+
+.search-icon{
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background: url(../../images/topbar.png) no-repeat 0 -99px;
+}
