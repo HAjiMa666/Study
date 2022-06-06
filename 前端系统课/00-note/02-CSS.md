@@ -400,3 +400,13 @@ web字体的兼容性
    3. 持续开始(duration)
    4. 如何动画(timing function)
  
+
+## CSS Animation
+1. 小于16fps,人眼就会感觉到卡顿
+2. 使用步骤
+   1. 使用keyframe定义动画序列 (每一帧动画如何执行)
+   2. 配置动画执行的名称,持续时间,动画曲线,延迟,执行次数,方向等
+
+## vertical align
+1. 行盒(line-box): 将行里面的所有内容包裹起来
+2. 在行盒内是基线对齐,要想不要基线对齐,只要改vertical-align就行
