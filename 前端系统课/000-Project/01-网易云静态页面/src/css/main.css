@@ -1,0 +1,260 @@
+.main{
+  display: flex;
+  background: url(../../images/wrap1.png) no-repeat 0 0;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.main .content{
+  width: 729px;
+  padding: 20px;
+
+  border-right: 1px solid #ccc;
+}
+
+.main .content header{
+  display: flex;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 2px solid #C10D0C;
+}
+
+.main .content header .title{
+  font-size: 20px;
+  color: #333;
+
+  position: relative;
+
+  margin-left: 33px;
+}
+
+.main .content header ul{
+  display: flex;
+  font-size: 12px;
+
+  margin-left: 12px;
+}
+
+.main .content header ul li:nth-child(2n)::before, 
+.main .content header ul li:nth-child(2n)::after{
+  content: "|";
+  color: #cfd0db;
+  padding: 0px 8px;
+}
+
+.main .content  header .more{
+  text-align: right;
+  font-size: 12px;
+  flex: 1;
+
+  padding-right: 24px;
+
+  position: relative;
+
+  cursor: pointer;
+}
+
+.main .content  header .more::after{
+  content: "";
+  width: 12px;
+  height: 12px;
+
+  background: url(../../images/index.png) no-repeat 0 -240px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.main .content header ul li a{
+  color: #666;
+}
+
+.main .content header .title::before{
+  content: "";
+  width: 33px;
+  height: 33px;
+  background: url(../../images/index.png) no-repeat -225px -156px;
+
+  position: absolute;
+  top: 3px;
+  left: -33px;
+}
+
+.main .content .hot-recommend ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .content .hot-recommend .main-body{
+  box-sizing: content-box;
+  width: 140px;
+  height: 204px;
+}
+
+/* .main .content .hot-recommend .title::before{
+  content: "";
+  width: 33px;
+  height: 33px;
+  background: url(../../images/index.png) no-repeat -225px -156px;
+
+  position: absolute;
+  top: 3px;
+  left: -33px;
+} */
+
+.main .side-bar{
+  width: 250px;
+}
+
+.main .side-bar .login{
+  font-size: 12px;
+  height: 126px;
+
+  background: url(../../images/index.png) no-repeat 0 0;
+}
+
+.main .side-bar .login span{
+  color: #666666;
+  display: inline-block;
+  line-height: 22px;
+
+  margin: 0px 22px;
+  padding: 16px 0px;
+}
+
+.main .side-bar .login .loginBtn{
+  width: 100px;
+  height: 31px;
+  line-height: 31px;
+  color: #fff;
+  text-align: center;
+  background: url(../../images/index.png) no-repeat 0 -195px;
+
+  margin: 0 auto;
+}
+
+.main .side-bar .singer,
+.main .side-bar .host{
+  padding: 20px;
+}
+
+.main .side-bar .singer .title,
+.main .side-bar .host .title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+
+.main .side-bar .singer .title span:nth-child(2){
+  color: #666666;
+  cursor: pointer; 
+}
+
+.main .side-bar .singer .title span:nth-child(2):hover{
+  text-decoration: underline;
+}
+
+.main .side-bar .singer .list li{
+  margin-top: 14px;
+  border: 1px solid #e9e9e9;
+}
+
+.main .side-bar .singer .list li a{
+  display: flex;
+  background: #fafafa;
+}
+
+.main .side-bar .singer .list li a:hover{
+  background: #f4f4f4;
+}
+
+.main .side-bar .singer .list .avatar{
+  width: 62px;
+  height: 62px;
+}
+
+.main .side-bar .singer .list .info{
+  height: 100%;
+  text-align: left;
+ 
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  padding-left: 12px;
+}
+
+.main .side-bar .singer .list .info h4{
+  font-size: 14px;
+  line-height: 36px;
+
+}
+
+.main .side-bar .singer .list .info span{
+  font-size: 12px ;
+}
+
+.main .side-bar .singer .btn{
+  width: 210px;
+  height: 31px;
+  line-height: 31px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  
+  background-color: #f6f6f6;
+
+  margin-top: 14px;
+  
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.main .side-bar .singer .btn:hover{
+  background-color: #fefefe;
+}
+
+.main .side-bar .host .list li{
+  width: 210px;
+  height: 50px;
+}
+
+.main .side-bar .host .list li:first-child{
+  margin-top: 16px;
+}
+
+.main .side-bar .host .list li a{
+  display: flex;
+}
+
+.main .side-bar .host .list li a .avatar{
+  width: 40px;
+  height: 40px;
+  margin-right: 6px;
+}
+
+.main .side-bar .host .list li a .info{
+  display:flex;
+  flex-direction: column;
+}
+
+.main .side-bar .host .list li a .info span{
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main .side-bar .host .list li a .info span:nth-child(1){
+  color: #000;
+}
+
+.main .side-bar .host .list li a .info span:nth-child(2){
+  color: #666;
+}

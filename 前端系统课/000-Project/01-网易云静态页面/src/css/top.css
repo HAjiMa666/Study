@@ -27,7 +27,7 @@
   height: 70px;
 }
 
-.item{
+.bar .item{
   height: 69px;
   font-size: 14px;
   color: #ccc;
@@ -95,18 +95,18 @@
   color: #ccc;
 }
 
-.login a{
+.top .login a{
   font-size: 14px;
   color: #787878;
 
   margin-left: 16px;
 }
 
-.login:hover a{
+.top .login:hover a{
   color: #ccc;
 }
-
-.login a:hover{
+ 
+.top .login a:hover{
   text-decoration: underline;
 }
 

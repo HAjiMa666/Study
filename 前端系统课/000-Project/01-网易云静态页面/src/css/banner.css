@@ -1,0 +1,85 @@
+.banner{
+  height: 284px;
+  background: no-repeat center/100% url(../../images/bannerImg-blur.jpg);
+}
+
+.banner .content{
+  display: flex;
+  position: relative;
+}
+
+.banner .content .bannerImg{
+  width: 730px;
+  position: relative;
+  left: -1px;
+}
+
+.banner .content .download{
+  position: relative;
+  width: 254px;
+  background: url(../../images/download.png) no-repeat 0 0;
+}
+
+.banner .content .download span{
+  font-size: 12px;
+  text-align: center;
+  color: #8d8d8d;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.banner .content .download .btn{
+  width: 215px;
+  height: 56px;
+
+  margin:186px 0 0 19px;
+  cursor: pointer;
+}
+
+.banner .content .download .btn:hover{
+  background: url(../../images/download.png) no-repeat 0 -290px;
+}
+
+.banner .content .left-arrow{
+  display: block;
+
+  width: 37px;
+  height: 62px;
+  background: url(../../images/banner.png) no-repeat 0 -360px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: -68px;
+
+  cursor: pointer;
+}
+
+.banner .content .left-arrow:hover{
+  background: url(../../images/banner.png) no-repeat 0 -430px;
+}
+
+.banner .content .right-arrow{
+  display: block;
+
+  width: 37px;
+  height: 62px;
+
+  background: url(../../images/banner.png) no-repeat 0 -508px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: -68px;
+
+  cursor: pointer;
+}
+
+.banner .content .right-arrow:hover{
+  background: url(../../images/banner.png) no-repeat 0 -578px;
+}
