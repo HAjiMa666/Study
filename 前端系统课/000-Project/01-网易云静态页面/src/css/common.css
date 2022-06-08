@@ -9,3 +9,95 @@
   min-width: 980px;
   margin: 0 auto;
 }
+
+.headphone-icon{
+  width: 14px;
+  height: 11px;
+
+  background: url(../../images/iconall.png) no-repeat 0 -24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 6px;
+  margin: auto 0;
+}
+
+.play-icon{
+  width: 16px;
+  height: 17px;
+
+  background: url(../../images/iconall.png) no-repeat 0 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 6px;
+  margin: auto 0;
+}
+
+.radio-icon{
+  display: inline-block;
+  width: 35px;
+  height: 15px;
+
+  position: relative;
+  margin-right: 8px;
+}
+.radio-icon::before{
+  content: "";
+  width: 35px;
+  height: 15px;
+  background: url(../../images/icon.png) no-repeat -31px -658px;
+
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.s-left-arrow{
+  width: 17px;
+  height: 17px;
+  background: url(../../images/index.png) no-repeat -260px -75px;
+
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.s-right-arrow{
+  width: 17px;
+  height: 17px;
+  background: url(../../images/index.png) no-repeat -300px -75px;
+
+  position: absolute;
+  right: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.xl-play-icon,
+.xl-collect-icon{
+  width: 22px;
+  height: 22px;
+  background: url(../../images/index.png) no-repeat;
+
+  cursor: pointer;
+}
+
+.xl-play-icon{
+  background-position: -267px -205px;
+}
+
+.xl-play-icon:hover{
+  background-position: -267px -235px;
+}
+
+.xl-collect-icon{
+  background-position: -300px -205px;
+}
+
+.xl-collect-icon:hover{
+  background-position: -300px -235px;
+}
