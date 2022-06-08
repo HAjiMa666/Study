@@ -280,11 +280,24 @@
 }
 
 .main .content .rankList .rankList-content .list li{
+  display: flex;
   height: 32px;
   line-height: 32px;
+
+  position: relative;
 }
 
-.main .content .rankList .rankList-content .list li a{
+.main .content .rankList .rankList-content .list li .operation{
+  width: 64px;
+  display: none;
+}
+.main .content .rankList .rankList-content .list li:hover .operation{
+  display: block;
+  background-color: red;
+}
+
+.main .content .rankList .rankList-content .list li>a{
+  flex: 1;
   display: flex;
   margin-left: 16px;
 }
