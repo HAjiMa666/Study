@@ -101,3 +101,36 @@
 .xl-collect-icon:hover{
   background-position: -300px -235px;
 }
+
+.rank-play-icon,
+.rank-playList-icon,
+.rank-collect-icon{
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: url(../../images/index.png) no-repeat;
+}
+
+.rank-play-icon{
+  background-position: -267px -268px;
+}
+
+.rank-play-icon:hover{
+  background-position: -267px -288px;
+}
+
+.rank-playList-icon{
+  background: url(../../images/icon.png) no-repeat 0px -700px;
+}
+
+.rank-playList-icon:hover{
+  background: url(../../images/icon.png) no-repeat -22px -700px;
+}
+
+.rank-collect-icon{
+  background-position: -297px -268px;
+}
+
+.rank-collect-icon{
+  background-position: -297px -288px;
+}

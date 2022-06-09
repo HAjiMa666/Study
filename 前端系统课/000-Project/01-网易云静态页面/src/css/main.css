@@ -292,8 +292,17 @@
   display: none;
 }
 .main .content .rankList .rankList-content .list li:hover .operation{
-  display: block;
-  background-color: red;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  padding-right: 6px;
+}
+
+.main .content .rankList .rankList-content .list li .rank-playList-icon{
+  box-sizing: content-box;
+  margin: 0px 4px 0px 8px;
+  position: relative;
+  top: 2px;
 }
 
 .main .content .rankList .rankList-content .list li>a{
