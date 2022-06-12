@@ -67,3 +67,22 @@
    1. href: 指定被链接资源的URL,可以是绝对的,也可以是相对的
    2. rel:指定链接类型,`icon`,`stylesheet`
 4. 在rel中一个属性是`dns-prefetch`,这个是一个性能优化手段,它可以提前告诉浏览器中的该资源的请求需要进行DNS查询和协议握手,可以避免用户在使用的时候才去建立连接,浪费用户的时间
+
+## HTML语义化元素
+> 为了使得整个网站语义化,更好被搜索引擎所收入
+
+1. header:头部元素
+2. nav:导航元素
+3. section:定义文档某个区域的元素
+4. article:内容元素
+5. aside:侧边元素
+6. footer:底部元素
+
+7. HTML5新增了对媒体类型的支持(audio和video) 
+8. video标签子的自动播放必须要搭配静音使用才能够自动播放(在chrome浏览器中)
+9. video的兼容性写法: 优先读取第一个video 如果不能用 就会使用source
+```HTML
+ <video src="">
+    <source src=""></source>
+ </video>
+```
