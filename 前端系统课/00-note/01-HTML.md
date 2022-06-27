@@ -86,3 +86,10 @@
     <source src=""></source>
  </video>
 ```
+10. HTML5对`input`元素进行了一定的扩展
+    1.  placeholder
+    2.  multiple
+    3.  autofocus
+    4.  新增了很多type类型,具体的上MDN看吧
+
+11. data-xx: HTML5新增的自定义属性类型,目的是为了可以让JS可以拿取到HTML元素自定义的值 element.dataset
