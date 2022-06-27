@@ -410,3 +410,43 @@ web字体的兼容性
 ## vertical align
 1. 行盒(line-box): 将行里面的所有内容包裹起来
 2. 在行盒内是基线对齐,要想不要基线对齐,只要改vertical-align就行
+
+## white-space
+* 用于设置空白处理和换行规则
+* 常用的也就no-wrap
+* normal,pre.pre-wrap.pre-line
+
+## text-overflow
+> 生效的前提是 overflow是hidden
+
+所以很自然的我们可以推出文字省略的css代码
+```css
+overflow:hidden
+white-space:no-wrap
+text-overflow:ellipsis
+```
+
+## CSS的函数
+1. rgb
+2. rgba
+3. translate
+4. rotate
+5. scale
+6. var:使用css定义的变量,变量定义方式(--开头),在var中使用
+7. calc:计算css值,用于计算元素的大小或位置
+8. blur:毛玻璃效果
+9. gradient:颜色渐变函数
+
+- blur()函数将高斯模糊应用于输出图片或者元素
+  - blur(radius),模糊的半径,用于定义高斯函数的偏差值,偏差值越大,图片越模糊
+  - 通常和两个属性一起使用
+    - filter:将模糊或者颜色偏移等图形效果应用于元素
+    - backdrop:为元素后面的区域添加模糊或者其他效果
+
+## 浏览器前缀
+* 加上浏览器前缀主要是为了有一个过度效果,因为有些新特性是新标准,以后等正式确定后可能还会修改,加上浏览器前缀后,浏览器可以识别到,就算以后标准更改,也能保证这个属性不出问题,可以自动帮忙做解析
+
+## FC(formatting Context)详解
+1. div/p/h1/h2属于BFC的布局中
+2. a/span/i/img属于IFC的布局
+
