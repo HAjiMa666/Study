@@ -1,5 +1,5 @@
 ---
-permalink: /Study/system/css
+permalink: /system/css
 ---
 
 # CSS
