@@ -1,6 +1,6 @@
 ---
-title: CodeSpirit的笔记
 layout: default
+title: "CodeSpirit的笔记"
 ---
 
 # 学习仓库
