@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Welcome to Jekyll!"
+title:  "CodeSpirit的学习笔记"
 ---
 
 # Hello World
