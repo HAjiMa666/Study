@@ -1,3 +1,6 @@
+---
+permalinks: /system/css
+---
 
 # CSS
 ## 基础知识
