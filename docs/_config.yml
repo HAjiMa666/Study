@@ -1,2 +1,8 @@
 theme: jekyll-theme-cayman
-permalink: :categories/:year/:month/:day/:title
+permalink: /:categories/:year/:month/:day/:title
+
+defaults:
+  - scope:
+      path: "Study/assets/img"
+    values:
+      image: true
