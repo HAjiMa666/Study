@@ -11,35 +11,16 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
 </head>
-<script>
-  [1,2,3].forEach(item=>{
-    console.log(item);
-  })
-  console.log("静态脚本执行")
-</script>
 <body>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/blog/">Blog</a>
-    <a href="/Study/system/css">CSS</a>
-  </nav>
-  <h1>{{ page.title }}</h1>
-  <section>
-    {{ content }}
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
-
-    <button type="button" class="btn btn-link">Link</button>
-  </section>
-  <footer>
-    &copy; to me
-  </footer>
+  <div class="container">
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </body>
 
 </html>
