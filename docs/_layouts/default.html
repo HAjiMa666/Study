@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#157878" />
+    <meta name="theme-color" content="#b26ef0" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" />
     {% include head-custom.html %}
@@ -15,17 +15,19 @@
   </head>
   <body>
     <div class="container flex">
-      <div class="nav h-screen w-56 bg-slate-400">
+      <div class="nav h-screen w-56 overflow-auto border-r-2">
         <h1 class="text-center text-2xl">目录</h1>
-        <ul>
-          {% for post in site.posts %}
-          <li>
-            <a href="/Study{{ post.url }}">{{ post.title }}</a>
+        <ul class="p-2">
+          {% for post in site.posts | sort: "order" %}
+          <li class="text-purple-600">
+            <a href="/Study{{ post.url }}"> {{ post.title }} 移动端适配 </a>
           </li>
           {% endfor %}
         </ul>
       </div>
-      <section class="content">{{content}}</section>
+      <section class="content flex flex-1 justify-center overflow-auto p-2">
+        <div>{{content}}</div>
+      </section>
     </div>
   </body>
 </html>
