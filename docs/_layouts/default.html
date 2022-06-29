@@ -9,24 +9,25 @@
     <meta name="theme-color" content="#b26ef0" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" />
-    {% include head-custom.html %}
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <div class="container flex">
-      <div class="nav w-56 overflow-auto border-r-2">
+    <header class="h-16">
+      <h1>CodeSpirit的学习笔记</h1>
+    </header>
+    <div class="flex content-start">
+      <div class="nav h-screen w-56 overflow-auto border-r-2">
         <h1 class="text-center text-2xl">目录</h1>
         <ul class="p-2">
-          {% assign posts = site.posts  | sort: "order" %}
-          {% for post in posts %}
+          {% assign posts = site.posts | sort: "order" %} {% for post in posts %}
           <li class="text-purple-600">
-            <a href="/Study{{ post.url }}"> {{ post.title }} 移动端适配 </a>
+            <a href="/Study{{ post.url }}"> {{ post.title }}</a>
           </li>
           {% endfor %}
         </ul>
       </div>
-      <section class="content flex h-screen flex-1 justify-center overflow-auto p-2">
-        <div>{{content}}</div>
+      <section class="flex h-screen flex-1 justify-center overflow-auto bg-slate-50 p-2">
+        <main id="content" class="main-content" role="main">{{content}}</main>
       </section>
     </div>
   </body>
