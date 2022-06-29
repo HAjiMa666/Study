@@ -3,6 +3,6 @@ permalink: /:categories/:year/:month/:day/:title
 
 defaults:
   - scope:
-      path: "Study/assets/images"
+      path: "assets/images"
     values:
       image: true
