@@ -21,7 +21,7 @@
         <ul class="h-5/6 overflow-auto p-4">
           {% assign posts = site.posts | sort: "order" %} {% for post in posts %}
           <li class="mt-2 text-purple-600">
-            <a href="/Study{{ post.url }}" class="block p-2"> {{ post.title }}</a>
+            <a href="{{ post.url }}" class="block p-2"> {{ post.title }}</a>
           </li>
           {% endfor %}
         </ul>
