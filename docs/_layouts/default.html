@@ -1,29 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="Study/assets/css/normalize.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <div class="container">
-    <div class="nav">
-      <ul>
-        {% for post in site.posts %}
+  <head>
+    <meta charset="UTF-8" />
+    {% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#157878" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" />
+    {% include head-custom.html %}
+    <link rel="stylesheet" href="Study/assets/css/normalize.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container flex">
+      <div class="nav h-screen w-56 bg-slate-400">
+        <h1 class="text-center text-2xl">目录</h1>
+        <ul>
+          {% for post in site.posts %}
           <li>
             <a href="/Study{{ post.url }}">{{ post.title }}</a>
           </li>
-        {% endfor %}
-      </ul>
+          {% endfor %}
+        </ul>
+      </div>
+      <section class="content">{{content}}</section>
     </div>
-    <section class="content">
-      {{content}}
-    </section>
-  </div>
- 
-
-</body>
-
+  </body>
 </html>
