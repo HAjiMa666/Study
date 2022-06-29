@@ -2,26 +2,26 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    {% seo %}
+    <!-- {% seo %} -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#b26ef0" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" />
   </head>
   <body>
-    <header class="h-16">
-      <h1>CodeSpirit的学习笔记</h1>
+    <header class="h-16 border-b-2">
+      <h1 class="flex h-full w-56 items-center justify-center text-lg text-purple-500">CodeSpirit的学习笔记</h1>
     </header>
     <div class="flex content-start">
-      <div class="nav h-screen w-56 overflow-auto border-r-2">
-        <h1 class="text-center text-2xl">目录</h1>
-        <ul class="p-2">
+      <div class="nav w-56 overflow-auto border-r-2">
+        <h1 class="text-center text-2xl text-purple-500">目录</h1>
+        <ul class="p-4">
           {% assign posts = site.posts | sort: "order" %} {% for post in posts %}
-          <li class="text-purple-600">
-            <a href="/Study{{ post.url }}"> {{ post.title }}</a>
+          <li class="mt-2 text-purple-600">
+            <a href="/Study{{ post.url }}" class="block p-2"> {{ post.title }}</a>
           </li>
           {% endfor %}
         </ul>
