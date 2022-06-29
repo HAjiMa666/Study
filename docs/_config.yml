@@ -1,8 +1,2 @@
 theme: jekyll-theme-cayman
 permalink: /:categories/:year/:month/:day/:title
-
-defaults:
-  - scope:
-      path: "assets/images"
-    values:
-      image: true
